@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkTime Module</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+  <div class="container">
+    <a href="#" class="logo">WorkTime.kz</a>
+    <nav class="nav" id="center">
+      <a href="#about">О Нас</a>
+      <a href="#products">Продукты</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <nav class="nav" id="right">
+      <a href="#login" class="btn">Войти</a>
+      <a href="#contacts" class="btn">Контакты</a>
+      <!-- Language Dropdown -->
+        <select id="language-select">
+          <option value="ru">RUS</option>
+          <option value="en">ENG</option>
+          <option value="kz">KAZ</option>
+        </select>
+    </nav>
+  </div>
+</header>
+
+
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="text-content">
+      <h1>Ваш надежный партнер в учете рабочего времени и управлении персоналом</h1>
+      <p>Упрощает работу HR, Службы Безопасности и облегчает интеграцию с ERP-системами 1С.</p>
+      <br>
+      <a href="#demo" class="btn">Попробовать Демо версию</a>
+    </div>
+    <div class="image-content">
+      <img src="images/1.png" alt="Hero Image">
+    </div>
+  </div>
+</section>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title">Функции, которые облегчают работу бизнеса</h2>
+      <div class="features-content">
+        <div class="features-text">
+          <h3>Мобильное приложение с уникальными возможностями:</h3>
+          <ul>
+            <li>
+              Подключение к базе данных вашей компании или создание своей базы для более широкого круга предприятий.
+            </li>
+            <li>
+              Интеграция с системами 1С или другими зарубежными платформами через синхронизацию данных в различных форматах (CSV, XML, XLSX, TXT и другие).
+            </li>
+          </ul>
+        </div>
+        <div class="features-image">
+          <img src="images/2.png" alt="Пример функции">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="modes" class="modes">
+    <div class="container">
+      <h2 class="section-title">Два режима работы:</h2>
+      <div class="modes-cards">
+        <!-- Карточка 1 -->
+        <div class="mode-card">
+          <div class="mode-card-inner">
+            <div class="mode-card-front">
+              <img src="images/3.png" alt="Режим 1">
+              <p>Кабинет Сотрудника</p>
+            </div>
+            <div class="mode-card-back">
+              <ul>
+                <li>Простая регистрация через ИИН с автоматическим заполнением данных из государственной базы.</li>
+                  <li>Отправка заявки на добавление в Кабинет Руководителя.</li>
+                  <li>Учет рабочего времени согласно настройкам Руководителя.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- Карточка 2 -->
+        <div class="mode-card">
+          <div class="mode-card-inner">
+            <div class="mode-card-front">
+              <img src="images/3.png" alt="Режим 2">
+              <p>Кабинет Руководителя</p>
+            </div>
+            <div class="mode-card-back">
+              <ul>
+                <li>Управление списком сотрудников с возможностью добавления по заявке.</li>
+                <li>Отправка пригласительных ссылок для подключения сотрудников.</li>
+                <li>Гибкая настройка графика рабочего времени, включая перерывы и обеды.</li>
+                <li>Оповещения о приходе/уходе сотрудников.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="time-tracking" class="time-tracking">
+    <div class="container">
+      <h2 class="section-title">Учет рабочего времени:</h2>
+      <div class="tabs">
+        <!-- Вкладки -->
+        <div class="tabs-menu">
+          <button class="tab-link active" data-tab="geolocation">Геолокация:</button>
+          <button class="tab-link" data-tab="notifications">Уведомления от сотрудников:</button>
+          <button class="tab-link" data-tab="additional">Дополнительные возможности:</button>
+          <button class="tab-link" data-tab="future">Будущие возможности:</button>
+        </div>
+        <!-- Контент вкладок -->
+        <div class="tabs-content">
+          <div id="geolocation" class="tab-content active">
+          <ul>
+            <li>Отслеживание местоположения сотрудников относительно координат рабочего места.</li>
+            <li>Уведомления при выходе из зоны работы</li>
+          </ul>  
+          </div>
+          <div id="notifications" class="tab-content">
+          <ul>
+            <li>Активация режима “На работе” через Кабинет Сотрудника.</li>
+          </ul>  
+          </div>
+          <div id="additional" class="tab-content">
+           <ul> <li>Биометрические данные:</li>
+            <li>Возможность активации по Touch-ID, Face-ID и другим биометрическим функциям смартфона.</li>
+            <li>Обязательная отправка селфи-фото для подтверждения личности.</li>
+</ul>
+</div>
+          <div id="future" class="tab-content">
+          <ul>
+            <li>Touch-ID, Face-ID и другие функции смартфона.</li>
+            <li>Использование смартфона как считывателя биометрических данных.</li>
+          </ul> 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <section id="candidate-check" class="candidate-check">
+    <div class="container">
+      <h2 class="section-title">Проверка кандидатов</h2>
+      <div class="block">
+        <h3 class="main-text">Гарантированная Безопасность для Вашего Бизнеса</h3>
+        <p>Наши услуги по проверке специалистов обеспечивают вас всесторонней информацией о кандидатах, минимизируя риски и создавая безопасное рабочее окружение. Мы предоставляем проверку по следующим параметрам:</p>
+        
+        <!-- Аккордеон -->
+        <div class="accordion">
+          <div class="accordion-item">
+            <button class="accordion-header">1. Сверка ИИН, ФИО и Даты Рождения:</button>
+            <div class="accordion-content">
+              <ul>
+                <li>Гарантия совпадения данных с официальными записями.</li>
+              </ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">2. Наличие ИП:</button>
+            <div class="accordion-content">
+              <ul><li>Подтверждение статуса индивидуального предпринимателя.</li></ul>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">3. Финансовая Надежность:</button>
+            <div class="accordion-content">
+            <ul><li>Проверка наличия штрафов и задолженностей по налогам.</li>
+            <li>Отсутствие в реестре должников.</li></ul>  
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">4. Розыск и Преступления:</button>
+            <div class="accordion-content">
+            <ul>
+              <li>Нахождение в розыске по экономическим преступлениям.</li>
+              <li>Проверка на алименты, связь с финансированием терроризма.</li>
+              <li>Состояние в реестре без вести пропавших.</li>
+            </ul>  
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">5. Судебная История:</button>
+            <div class="accordion-content">
+              <ul>
+                <li>Наличие судебных разбирательств.</li>
+                <li>Акты по административным, уголовным или гражданским делам.</li>
+                </ul>
+        
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header">6. Безопасность и Этика:</button>
+            <div class="accordion-content">
+              <ul>
+                <li>Отсутствие в реестре педофилов.</li>
+              </ul>
+              </div>
+          </div>
+        </div>
+  
+        <p class="additional-text">Наша программа предоставляет вам необходимую информацию для принятия обоснованных решений о найме. Мы гарантируем конфиденциальность данных и оперативность предоставления результатов, помогая вам сформировать команду, на которую вы можете полагаться. Обеспечьте свой бизнес безопасностью и надежностью с нашей программой проверки кандидатов.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="why-choose" class="why-choose">
+    <div class="container">
+      <div class="text-section">
+        <h2 class="main-title">Почему WorkTime – ваш выбор №1?</h2>
+        <ul class="description">
+          <li>Простота использования.</li>
+          <li>Гибкие настройки под Ваши бизнес-процессы.</li>
+          <li>Надежность и безопасность данных.</li>
+          <li>Поддержка различных форматов данных и быстрая интеграция с 1С системами.</li>
+        </ul>
+        <a href="#contact-sales" class="btn">Свяжитесь с отделом продаж</a>
+      </div>
+      <div class="image-section">
+        <img src="images/4.png" alt="WorkTime Image">
+      </div>
+    </div>
+  </section>
+  
+  <section id="features1" class="features1">
+    <div class="container">
+      <div class="cards">
+        <div class="card">
+          <img src="images/5.png" alt="Feature 1" class="card-img">
+          <div class="card-text">
+            <p>Учет рабочего времени через QR/штрихкод:</p>
+          </div>
+          <div class="card-overlay">
+            <p>Добавление внешнего модуляв 1С систему для сканированияQR/штрихкода с ИИН, фиксациивремени прихода/ухода сотрудников</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/6.png" alt="Feature 2" class="card-img">
+          <div class="card-text">
+            <p>Интеграция с гос.системой через API:</p>
+          </div>
+          <div class="card-overlay">
+            <p>Подключение к API государственной системы для автоматического получения данных о сотрудниках, включая ФИО и дату рождения.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/7.png" alt="Feature 3" class="card-img">
+          <div class="card-text">
+            <p>Создание документа "Учет рабочего времени":</p>
+          </div>
+          <div class="card-overlay">
+            <p>Запись полученных данных в отдельный документ/справочникв 1С, обеспечивая надежный 
+              учет рабочего времени.</p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="images/8.png" alt="Feature 4" class="card-img">
+          <div class="card-text">
+            <p>Удобное сканирование в РМК:</p>
+          </div>
+          <div class="card-overlay">
+            <p>Возможность сканирования ИИН напрямую из Рабочего Места Кассира (РМК), с удобной кнопкой на экране и без необходимости открытия дополнительной формы.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Join Us Section -->
+<section class="join-us">
+  <h2 class="section-title">Присоединяйтесь к нам сегодня и упростите управление рабочим временем и подбор кандидатов в вашей компании!</h2>
+  
+  <!-- Block with main color -->
+  <div class="subscription-block">
+    <h3 class="block-title">Получите доступ к нашему модулю на выбранный период и экономьте с нашими выгодными тарифами.</h3>
+
+    <div class="subscription-info">
+      <!-- Left side (Free demo subscription) -->
+      <div class="subscription-left">
+        <h4>Бесплатная демо-подписка:</h4>
+        <ul>
+          <li>Длительность: 15 дней</li>
+          <li>Без доступа к проверке кандидатов</li>
+        </ul>
+        <br>
+        <!-- Button under demo subscription -->
+        <a href="#demo" class="btn-demo">Попробовать Демо версию</a>
+      </div>
+
+      <!-- Right side (Paid subscriptions) -->
+      <div class="subscription-right">
+        <h4>Платные подписки:</h4>
+        <ul>
+          <li>1 месяц: 49 900 тенге</li>
+          <li>1 квартал: 141 900 тенге вместо 149 700 тг.</li>
+          <li>1 полугодие: 269 900 тенге вместо 299 400 тг.</li>
+          <li>1 год: всего лишь 512 900 тенге вместо 598 800 тг.</li>
+          <br>
+          <li>Проверка кандидатов: всего лишь 150 тенге/ед.!</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+  
+  <!-- Footer -->
+<footer class="footer">
+  <div class="footer-container">
+    <!-- Left section: News subscription -->
+    <div class="footer-left">
+      <h4 class="footer-title">Получать новости:</h4>
+      <div class="subscribe-form">
+        <input type="email" placeholder="Ваш e-mail" class="email-input">
+        <button class="subscribe-btn">Подписаться</button>
+      </div>
+      <p class="small-text">Подпишитесь и получайте самую свежую информацию от WorkTime. Не нужно беспокоиться о спаме, мы позаботимся об этом.</p>
+    </div>
+
+    <!-- Right section: Links -->
+    <div class="footer-right">
+      <div class="footer-section">
+        <h4>Поддержка</h4>
+        <ul>
+          <li>Учетная запись</li>
+          <li>FAQ</li>
+          <li>Связяться с нами</li>
+          <li>Служба поддержки</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Продукт</h4>
+        <ul>
+          <li>AI ассистент</li>
+          <li>CRM</li>
+          <li>Выставление счетов</li>
+          <li>Цена подписки</li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Компания</h4>
+        <ul>
+          <li>О нас</li>
+          <li>Партнерская программа</li>
+          <li>Карьера</li>
+          <li>Политика конфиденциальности</li>
+          <li>Условия использования</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>

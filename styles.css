@@ -1,0 +1,747 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+/* Header */
+.header {
+  background: #4c35de;
+  color: #fff;
+  padding: 5px 25px;
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  top: 0;
+  z-index: 1000; /* Приоритет слоя для header */
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.header .nav a {
+  color: #fff;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.header .btn {
+  padding: 10px;
+  background: #4c35de;
+  color: #fff;
+  border-radius: 5px;
+  border: 2px solid transparent; /* Добавление прозрачной рамки по умолчанию */
+}
+
+/* Для первой кнопки (Войти) - белая рамка */
+.header .btn:first-of-type {
+  border: 2px solid #fff; /* Белая рамка для первой кнопки */
+  background: transparent; /* Фон прозрачный */
+}
+
+/* Для второй кнопки (Контакты) - белый фон */
+.header .btn:last-of-type {
+  background: #fff; /* Белый фон для второй кнопки */
+  color: #4c35de; /* Текст белой кнопки становится основного цвета */
+}
+
+/* Language Dropdown */
+#language-select {
+  padding: 8px;
+  background-color: #fff;
+  color: #4c35de; /* Цвет текста, который будет контрастировать с фоном */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 15px; /* Отступ слева от кнопок */
+}
+
+#language-select:focus {
+  outline: none; /* Убирает стандартный бордер при фокусе */
+  border-color: #007bff; /* Синий бордер при фокусе */
+}
+
+/* Стили для выпадающего списка */
+#language-select option {
+  background-color: #fff;
+  color: #333;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+#language-select option:hover {
+  background-color: #f0f0f0; /* Легкий серый фон при наведении */
+}
+  
+/* Hero Section */
+.hero {
+  background-image: url('images/fi.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: left; /* Текст выравнивается слева */
+  padding: 0 20px;
+}
+
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Максимальная ширина контейнера */
+}
+
+.hero .text-content {
+  max-width: 50%; /* Ограничиваем ширину текста до 50% */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.2; /* Уменьшаем межстрочное расстояние */
+}
+
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero .btn {
+  background: #007bff;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.hero .image-content {
+  max-width: 45%; /* Ограничиваем ширину изображения до 45% */
+}
+
+.hero .image-content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Округляем углы изображения */
+}
+
+  /* Features Section */
+.features {
+  padding: 50px 25px;
+  background-color: #f9f9f9;
+}
+
+.features .section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.features-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4c35de;
+  color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.features-text {
+  flex: 1;
+  max-width: 50%;
+  padding: 15px;
+}
+
+.features-text h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.features-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.features-image {
+  flex: 1;
+  max-width: 50%;
+  padding: 15px;
+  text-align: center;
+}
+
+.features-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Modes Section */
+.modes {
+  padding: 50px 25px;
+  background-color: #f9f9f9;
+}
+
+.modes .section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  position: relative; /* Установим базовый слой для секции */
+  z-index: 1; /* Убедимся, что секция находится ниже header */
+}
+
+.modes-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.mode-card {
+  perspective: 1000px; /* Для 3D-эффекта */
+  width: 400px; /* Увеличенная ширина */
+  height: 500px; /* Увеличенная высота */
+}
+
+.mode-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.mode-card:hover .mode-card-inner {
+  transform: rotateY(180deg); /* Поворот при наведении */
+}
+
+.mode-card-front,
+.mode-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #4c35de;
+  color: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  padding: 30px; /* Больше внутреннего отступа */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Увеличенная тень */
+}
+
+.mode-card-front img {
+  max-width: 90%; /* Картинка шире */
+  height: auto;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.mode-card-front p {
+  font-size: 1.4rem; /* Увеличенный текст */
+  font-weight: bold;
+  text-align: center;
+}
+
+.mode-card-back {
+  transform: rotateY(180deg); /* Обратная сторона */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem; /* Более крупный текст */
+  line-height: 1.6;
+}
+
+/* Time Tracking Section */
+.time-tracking {
+  padding: 50px 25px;
+  background-color: #4c35de; /* Основной цвет фона */
+}
+
+.time-tracking .section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #fff; /* Белый цвет текста */
+  margin-bottom: 30px;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.tabs-menu {
+  flex: 1;
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.tab-link {
+  background-color: #3729b0; /* Темный оттенок основного цвета */
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.tab-link:hover,
+.tab-link.active {
+  background-color: #261d86; /* Ещё темнее для активного состояния */
+}
+
+.tabs-content {
+  flex: 2;
+  max-width: 65%;
+  background-color: #fff; /* Белый фон для контента */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #333; /* Основной цвет текста */
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+  
+/* Candidate Check Section */
+.candidate-check {
+  padding: 50px 25px;
+  background-color: #fff; /* Белый фон для секции */
+}
+
+.candidate-check .section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #333; /* Черный цвет для заголовка */
+  margin-bottom: 30px;
+}
+
+.candidate-check .block {
+  background-color: #4c35de; /* Основной цвет для блока */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #fff; /* Белый текст в блоке */
+}
+
+.candidate-check .main-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #fff; /* Белый цвет для основного текста */
+  margin-bottom: 1rem;
+}
+
+.candidate-check p {
+  font-size: 1.125rem;
+  color: #fff; /* Белый текст в блоке */
+  margin-bottom: 1.5rem;
+}
+
+/* Accordion */
+.accordion {
+  margin-bottom: 1.5rem;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  background-color: #3729b0; /* Темный оттенок основного цвета для аккордеона */
+  color: #fff;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  font-size: 1.125rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+  background-color: #251a7a; /* Еще более темный оттенок при наведении */
+}
+
+.accordion-content {
+  display: none;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  margin-top: 5px;
+  color: #333;
+}
+.accordion-content p{
+  color: #222;
+}
+
+/* Открытие аккордеона */
+.accordion-item.active .accordion-content {
+  display: block;
+}
+
+/* Дополнительный текст */
+.additional-text {
+  font-size: 1rem;
+  color: #333; /* Темный цвет для дополнительного текста */
+  margin-top: 1rem;
+}
+
+/* Why Choose Section */
+.why-choose {
+  background-color: #fff; /* Белый фон секции */
+  padding: 50px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.why-choose .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.text-section {
+  max-width: 50%; /* Оставляем 50% ширины для текста */
+}
+
+.main-title {
+  font-size: 2.5rem; /* Увеличиваем размер заголовка */
+  font-weight: bold;
+  color: #4c35de; /* Основной цвет для заголовка */
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: #666; /* Светлый цвет для описания */
+  margin-bottom: 25px;
+  list-style-type: none; /* Убираем стандартные маркеры */
+  padding-left: 0;
+}
+
+.description li {
+  margin-bottom: 10px; /* Отступ между пунктами */
+}
+
+.btn {
+  padding: 12px 25px;
+  background-color: #4c35de; /* Основной цвет */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.image-section {
+  max-width: 50%; /* Оставляем 50% ширины для картинки */
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Features Section */
+.features1 {
+  background-color: #D9D9D9;
+  padding: 50px 25px;
+  color: #fff;
+}
+
+.features1 .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: center;
+}
+
+.card {
+  position: relative;
+  width: 23%; /* Карточки будут занимать по 23% ширины, чтобы вместиться в ряд */
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  color: #333; /* Цвет текста внутри карточки */
+}
+
+.card-img {
+  width: 90%;
+  height: 200px;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.card-text {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-text p {
+  font-size: 1.125rem;
+  opacity: 1; /* Убедитесь, что текст по умолчанию виден */
+  font-weight: bold;
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  text-align: center;
+}
+
+.card:hover .card-img,
+.card:hover .card-text {
+  opacity: 0; /* Скрываем картинку и текст при наведении */
+}
+
+.card:hover .card-overlay {
+  opacity: 1; /* Показываем новый текст при наведении */
+}
+
+.card:hover {
+  transform: translateY(-10px); /* Немного поднимаем карточку при наведении */
+}
+
+/* Join Us Section */
+.join-us {
+  background-color: #fff; /* Белый фон секции */
+  padding: 50px 25px;
+  color: #333;
+  text-align: center;
+}
+
+.join-us .section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4c35de; /* Основной цвет для заголовка */
+  margin-bottom: 30px;
+}
+
+.subscription-block {
+  background-color: #4c35de; /* Основной цвет для блока */
+  padding: 30px;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.block-title {
+  font-size: 1.875rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subscription-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: left;
+}
+
+.subscription-left,
+.subscription-right {
+  width: 48%;
+}
+
+.subscription-left h4,
+.subscription-right h4 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.subscription-left ul,
+.subscription-right ul {
+  list-style-type: disc; /* Добавляем точки перед li */
+  padding-left: 20px; /* Отступ слева для корректного отображения точек */
+}
+
+.subscription-left li,
+.subscription-right li {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+}
+
+.btn-demo {
+  display: inline-block;
+  background-color: #fff; /* Белый цвет кнопки */
+  color: #4c35de; /* Основной цвет для текста на кнопке */
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.btn-demo:hover {
+  background-color: #4c35de; /* При наведении на кнопку */
+  color: #fff; /* Текст становится белым */
+}
+
+/* Footer */
+.footer {
+  background-color: #f8f8f8; /* Светлый фон для футера */
+  padding: 50px 25px;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  width: 40%;
+}
+
+.footer-title {
+  color: #4c35de; /* Основной цвет для текста заголовка */
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+}
+
+.subscribe-form {
+  display: flex;
+  border: 1px solid #000; /* Черная рамка */
+  border-radius: 25px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.email-input {
+  border: none;
+  padding: 10px;
+  width: 70%;
+  font-size: 1rem;
+  outline: none;
+}
+
+.subscribe-btn {
+  background-color: #4c35de; /* Основной цвет кнопки */
+  color: white;
+  margin: 1px;
+  padding: 10px;
+  border-radius: 20px;
+  width: 30%;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.subscribe-btn:hover {
+  background-color: #3b29a7; /* Тон для кнопки при наведении */
+}
+
+.small-text {
+  font-size: 0.875rem;
+  color: #666;
+}
+
+.footer-right {
+  width: 55%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-section {
+  width: 30%;
+}
+
+.footer-section h4 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer-section li {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.footer-section li:hover {
+  color: #4c35de; /* Цвет при наведении на элементы списка */
+  cursor: pointer;
+}
+
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    background: #fff;
+    color: #222;
+    padding: 1rem 0;
+  }
+  .footer a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+ 
